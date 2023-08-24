@@ -1,0 +1,16 @@
+[
+  {
+    "modid": "pixietable",
+    "name": "Pixie Table Mod",
+    "description": "Pixies do the work for you!",
+    "version": "${modVersion}",
+    "mcversion": "1.12.2",
+    "url": "",
+    "updateUrl": "",
+    "authorList": ["slava_110"],
+    "credits": "Credits to Foreck for provided artwork and idea",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
+]
