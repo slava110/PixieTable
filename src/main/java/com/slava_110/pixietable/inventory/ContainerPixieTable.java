@@ -28,12 +28,12 @@ public class ContainerPixieTable extends Container {
 
         for (int sloty = 0; sloty < 3; sloty++) {
             for (int slotx = 0; slotx < 9; slotx++) {
-                addSlotToContainer(new Slot(playerInv, slotx + sloty * 9 + 9, 8 + slotx * 18, 84 + sloty * 18));
+                addSlotToContainer(new Slot(playerInv, slotx + sloty * 9 + 9, 8 + slotx * 18, 95 + sloty * 18));
             }
         }
 
         for (int slot = 0; slot < 9; slot++) {
-            addSlotToContainer(new Slot(playerInv, slot, 8 + slot * 18, 142));
+            addSlotToContainer(new Slot(playerInv, slot, 8 + slot * 18, 153));
         }
     }
 

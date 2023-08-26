@@ -11,6 +11,8 @@ public class GuiPixieTable extends GuiContainer {
 
     public GuiPixieTable(ContainerPixieTable inventorySlotsIn) {
         super(inventorySlotsIn);
+        xSize = 176;
+        ySize = 176;
     }
 
     @Override
