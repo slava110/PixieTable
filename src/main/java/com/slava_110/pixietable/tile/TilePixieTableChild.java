@@ -1,0 +1,26 @@
+package com.slava_110.pixietable.tile;
+
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTUtil;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.math.BlockPos;
+
+public class TilePixieTableChild extends TileEntity {
+    private BlockPos masterTilePos;
+
+    public BlockPos getMasterTilePos() {
+        return masterTilePos;
+    }
+
+    @Override
+    public void readFromNBT(NBTTagCompound compound) {
+        super.readFromNBT(compound);
+        masterTilePos = NBTUtil.getPosFromTag(compound.getCompoundTag("masterTilePos"));
+    }
+
+    @Override
+    public NBTTagCompound writeToNBT(NBTTagCompound compound) {
+        compound.setTag("masterTilePos", NBTUtil.createPosTag(masterTilePos));
+        return super.writeToNBT(compound);
+    }
+}

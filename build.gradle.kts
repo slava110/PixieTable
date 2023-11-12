@@ -3,7 +3,7 @@ plugins {
     id("com.gtnewhorizons.retrofuturagradle") version "1.3.24"
 }
 
-group = "com.slava_110.customizedwither"
+group = "com.slava_110.pixietable"
 version = "1.0.0"
 
 java {
@@ -22,12 +22,6 @@ minecraft {
     mcpMappingVersion.set("39")
 
     username.set("Developer")
-
-    extraRunJvmArguments.addAll(
-        "-ea:${project.group}"
-    )
-
-    groupsToExcludeFromAutoReobfMapping.addAll("com.diffplug", "com.diffplug.durian", "net.industrial-craft")
 }
 
 repositories {
@@ -40,6 +34,10 @@ repositories {
         url = uri("https://repo.spongepowered.org/maven")
     }
     maven {
+        name = "BlameJared"
+        url = uri("https://maven.blamejared.com")
+    }
+    maven {
         name = "CurseMaven"
         url = uri("https://cursemaven.com")
         content {
@@ -49,7 +47,7 @@ repositories {
 }
 
 dependencies {
-
+    implementation(rfg.deobf("CraftTweaker2:CraftTweaker2-MC1120-Main:1.12-4.1.20.692"))
 }
 
 tasks.named<JavaExec>("runObfClient") {

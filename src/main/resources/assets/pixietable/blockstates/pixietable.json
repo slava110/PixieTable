@@ -1,5 +1,8 @@
 {
   "variants": {
-    "normal": { "model": "pixietable:pixietable" }
+    "facing=north": { "model": "pixietable:pixietable" },
+    "facing=south": { "model": "pixietable:pixietable", "y": 180 },
+    "facing=west":  { "model": "pixietable:pixietable", "y": 270 },
+    "facing=east":  { "model": "pixietable:pixietable", "y": 90 }
   }
 }

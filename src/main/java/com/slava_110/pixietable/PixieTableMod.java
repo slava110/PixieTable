@@ -1,6 +1,7 @@
 package com.slava_110.pixietable;
 
 import com.slava_110.pixietable.block.BlockPixieTable;
+import com.slava_110.pixietable.tile.TilePixieTable;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -44,6 +45,7 @@ public final class PixieTableMod {
     @SubscribeEvent
     public void registerBlocks(RegistryEvent.Register<Block> ev) {
         ev.getRegistry().register(new BlockPixieTable());
+        GameRegistry.registerTileEntity(TilePixieTable.class, new ResourceLocation("pixietable:pixietable"));
     }
 
     @SubscribeEvent
