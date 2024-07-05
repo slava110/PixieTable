@@ -4,11 +4,9 @@ import com.slava_110.pixietable.PixieTableMod;
 import com.slava_110.pixietable.tile.TilePixieTable;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.init.Blocks;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
-import net.minecraft.inventory.SlotCrafting;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.items.SlotItemHandler;
 
@@ -63,7 +61,7 @@ public class ContainerPixieTable extends Container {
                 if (!mergeItemStack(itemstack1, containerSlots, inventorySlots.size(), true)) {
                     return ItemStack.EMPTY;
                 }
-            } else if (!mergeItemStack(itemstack1, 0, containerSlots, false)) {
+            } else if (!mergeItemStack(itemstack1, 9, containerSlots, false)) {
                 return ItemStack.EMPTY;
             }
             if (itemstack1.getCount() == 0) {

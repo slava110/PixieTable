@@ -7,5 +7,6 @@ public final class ConfigPixieTable {
 
     public static String pixieJarItem = "";
 
-
+    public static int vanillaRecipeTime = 500;
+    public static int workInTickPerPixie = 1;
 }

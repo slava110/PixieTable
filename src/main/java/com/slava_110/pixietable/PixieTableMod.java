@@ -1,7 +1,9 @@
 package com.slava_110.pixietable;
 
 import com.slava_110.pixietable.block.BlockPixieTable;
+import com.slava_110.pixietable.block.BlockPixieTableChild;
 import com.slava_110.pixietable.tile.TilePixieTable;
+import com.slava_110.pixietable.tile.TilePixieTableChild;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -25,6 +27,8 @@ public final class PixieTableMod {
     public static PixieTableMod INSTANCE = null;
     @GameRegistry.ObjectHolder("pixietable:pixietable")
     public static final BlockPixieTable BLOCK_PIXIE_TABLE = null;
+    @GameRegistry.ObjectHolder("pixietable:pixietablechild")
+    public static final BlockPixieTableChild BLOCK_PIXIE_TABLE_CHILD = null;
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent ev) {
@@ -45,7 +49,9 @@ public final class PixieTableMod {
     @SubscribeEvent
     public void registerBlocks(RegistryEvent.Register<Block> ev) {
         ev.getRegistry().register(new BlockPixieTable());
+        ev.getRegistry().register(new BlockPixieTableChild());
         GameRegistry.registerTileEntity(TilePixieTable.class, new ResourceLocation("pixietable:pixietable"));
+        GameRegistry.registerTileEntity(TilePixieTableChild.class, new ResourceLocation("pixietable:pixietablechild"));
     }
 
     @SubscribeEvent

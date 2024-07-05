@@ -1,6 +1,6 @@
 plugins {
     id("org.jetbrains.gradle.plugin.idea-ext") version "1.1.7"
-    id("com.gtnewhorizons.retrofuturagradle") version "1.3.24"
+    id("com.gtnewhorizons.retrofuturagradle") version "1.4.0"
 }
 
 group = "com.slava_110.pixietable"
@@ -14,8 +14,6 @@ java {
 }
 
 minecraft {
-    javaToolchain.set(java.toolchain)
-
     mcVersion.set("1.12.2")
 
     mcpMappingChannel.set("stable")
@@ -48,6 +46,7 @@ repositories {
 
 dependencies {
     implementation(rfg.deobf("CraftTweaker2:CraftTweaker2-MC1120-Main:1.12-4.1.20.692"))
+    implementation("mezz.jei:jei_1.12.2:4.16.1.1012")
 }
 
 tasks.named<JavaExec>("runObfClient") {

@@ -2,10 +2,7 @@ package com.slava_110.pixietable.client.gui;
 
 import com.slava_110.pixietable.inventory.ContainerPixieTable;
 import net.minecraft.client.gui.GuiButton;
-import net.minecraft.client.gui.GuiButtonImage;
 import net.minecraft.client.gui.inventory.GuiContainer;
-import net.minecraft.client.resources.I18n;
-import net.minecraft.inventory.Container;
 import net.minecraft.util.ResourceLocation;
 
 import java.io.IOException;

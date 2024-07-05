@@ -12,6 +12,10 @@ public class TilePixieTableChild extends TileEntity {
         return masterTilePos;
     }
 
+    public void setMasterTilePos(BlockPos masterTilePos) {
+        this.masterTilePos = masterTilePos;
+    }
+
     @Override
     public void readFromNBT(NBTTagCompound compound) {
         super.readFromNBT(compound);
@@ -20,7 +24,8 @@ public class TilePixieTableChild extends TileEntity {
 
     @Override
     public NBTTagCompound writeToNBT(NBTTagCompound compound) {
+        super.writeToNBT(compound);
         compound.setTag("masterTilePos", NBTUtil.createPosTag(masterTilePos));
-        return super.writeToNBT(compound);
+        return compound;
     }
 }
